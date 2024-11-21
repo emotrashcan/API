@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">📚 Story Management System</span>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Story Form -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-card">
+                    <div class="form-header">
+                        <h4><i class="fas fa-plus-circle"></i> Add New Story</h4>
+                    </div>
+                    <div class="form-body">
+                        <form id="storyForm">
+                            <input type="hidden" id="storyId">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Story Title</label>
+                                <input type="text" class="form-control" id="title" required 
+                                       placeholder="Enter story title...">
+                            </div>
+                            <div class="mb-3">
+                                <label for="content" class="form-label">Story Content</label>
+                                <textarea class="form-control" id="content" rows="4" required
+                                          placeholder="Write your story here..."></textarea>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary" id="submitBtn">
+                                    <i class="fas fa-paper-plane"></i> Add Story
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary" id="cancelBtn" style="display: none;">
+                                    <i class="fas fa-times"></i> Cancel
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stories List -->
+        <div class="stories-section mt-5">
+            <h4 class="section-title"><i class="fas fa-book-open"></i> Stories Collection</h4>
+            <div id="storiesList" class="row g-4"></div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>© 2024 Story Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
